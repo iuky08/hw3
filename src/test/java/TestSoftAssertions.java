@@ -5,16 +5,19 @@
 //$("h1").$("div") тэг h1 будет родительским, тэг div - дочерним
 
 import com.codeborne.selenide.*;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Point;
+
+import java.awt.*;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 public class TestSoftAssertions {
     @BeforeAll
@@ -38,16 +41,15 @@ public class TestSoftAssertions {
 
     @Test
     void OptionalTest(){
-//      Запрограммируйте Drag&Drop с помощью Selenide.actions()
-//      Откройте https://the-internet.herokuapp.com/drag_and_drop
-//      Перенесите прямоугольник А на место В
-//
-//                - Проверьте, что прямоугольники действительно поменялись
-//
-//        P.S. В Selenide есть команда $(element).dragAndDrop($(to-element)), проверьте работает ли тест, если использовать её вместо actions()
-//
-//        (раньше не работала из-за ошибки в ChromeDriver, но может быть уже починили? :-)).
-//
-//        Если работает - сообщите в группе курса.
+        Configuration.timeout = 3000;
+        //Запрограммируйте Drag&Drop с помощью Selenide.actions()
+        //Откройте https://the-internet.herokuapp.com/drag_and_drop
+        Selenide.open("https://the-internet.herokuapp.com/drag_and_drop");
+        //Хотелось бы помощь получить с решением этой задачи :((((
+        //- Перенесите прямоугольник А на место В
+        //- Проверьте, что прямоугольники действительно поменялись
+        //P.S. В Selenide есть команда $(element).dragAndDrop($(to-element)), проверьте работает ли тест, если использовать её вместо actions()
+        //(раньше не работала из-за ошибки в ChromeDriver, но может быть уже починили? :-)).
+        //Если работает - сообщите в группе курса.
     }
 }
