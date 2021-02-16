@@ -38,18 +38,4 @@ public class TestSoftAssertions {
        // Откройте страницу SoftAssertions, проверьте что внутри есть пример кода для JUnit5
         $(".page").shouldHave(text("Using JUnit5 extend test class"));
     }
-
-    @Test
-    void OptionalTest(){
-        Configuration.timeout = 3000;
-        //Запрограммируйте Drag&Drop с помощью Selenide.actions()
-        //Откройте https://the-internet.herokuapp.com/drag_and_drop
-        Selenide.open("https://the-internet.herokuapp.com/drag_and_drop");
-        //Хотелось бы помощь получить с решением этой задачи :((((
-        //- Перенесите прямоугольник А на место В
-        //- Проверьте, что прямоугольники действительно поменялись
-        //P.S. В Selenide есть команда $(element).dragAndDrop($(to-element)), проверьте работает ли тест, если использовать её вместо actions()
-        //(раньше не работала из-за ошибки в ChromeDriver, но может быть уже починили? :-)).
-        //Если работает - сообщите в группе курса.
-    }
 }
